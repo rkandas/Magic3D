@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/GyroDemo.unity
+    guid: f1f03eb0af18d415c8f7c46fb33467e8
+  - enabled: 1
     path: Assets/Scenes/FaceTrackingScene.unity
     guid: 5fdef241cefa240a095e314ade2dc346
   m_configObjects:

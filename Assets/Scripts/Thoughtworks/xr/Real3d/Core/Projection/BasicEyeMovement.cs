@@ -19,7 +19,7 @@ namespace Thoughtworks.xr.Real3d.Core.Projection
             initialLocalRotation = virtualEye.transform.localRotation;
         }
 
-        void Update()
+        void FixedUpdate()
         {
             if (gazeProvider == null)
                 return;

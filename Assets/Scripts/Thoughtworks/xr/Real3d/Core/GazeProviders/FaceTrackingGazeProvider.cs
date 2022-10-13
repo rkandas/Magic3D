@@ -10,6 +10,7 @@ namespace Thoughtworks.xr.Real3d.Core.GazeProviders
         private ARFace trackingFace;
 
         [SerializeField] private float movementScale = 2f;
+
         void Start()
         {
             IsTracking = true;
@@ -20,11 +21,11 @@ namespace Thoughtworks.xr.Real3d.Core.GazeProviders
             }
             else
             {
-                ARCoreFaceManager.facesChanged += ARCoreFaceManagerOnfacesChanged;
+                ARCoreFaceManager.facesChanged += ARCoreFaceManagerOnFacesChanged;
             }
         }
 
-        private void ARCoreFaceManagerOnfacesChanged(ARFacesChangedEventArgs facesChangedEventArgs)
+        private void ARCoreFaceManagerOnFacesChanged(ARFacesChangedEventArgs facesChangedEventArgs)
         {
             if (facesChangedEventArgs.added.Count > 0)
             {
@@ -37,8 +38,6 @@ namespace Thoughtworks.xr.Real3d.Core.GazeProviders
                 Debug.LogWarning("Face removed. Face ID:" + trackingFace.trackableId);
                 trackingFace = null;
             }
-
-
         }
 
         private void Update()
@@ -48,9 +47,9 @@ namespace Thoughtworks.xr.Real3d.Core.GazeProviders
                 if (ARCoreFaceManager == null || trackingFace == null)
                     return;
 
-                translation = new Vector3(-trackingFace.transform.position.x, trackingFace.transform.position.y, trackingFace.transform.position.z) * movementScale;
-                Debug.Log("Position:" + translation );
-
+                translation = new Vector3(-trackingFace.transform.position.x, trackingFace.transform.position.y,
+                    trackingFace.transform.position.z) * movementScale;
+                Debug.Log("Position:" + translation);
             }
         }
     }

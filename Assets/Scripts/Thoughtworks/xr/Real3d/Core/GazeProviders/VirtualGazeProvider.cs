@@ -7,8 +7,6 @@ namespace Thoughtworks.xr.Real3d.Core.GazeProviders
         [HideInInspector]
         public bool IsTracking { get; protected set; }
         [HideInInspector]
-        public ulong TrackedId { get; protected set; }
-        [HideInInspector]
         public Vector3 Translation { get => translation; }
         
         [HideInInspector]
