@@ -34,6 +34,7 @@ To run for Android , setup OpenJDK and Android SDK & NDK Tools under Platforms w
 
 ### [Contributors](#contributors)
 - [Raju Kandaswamy](https://github.com/rkandas)
+- [Neelarghya Mandal](https://github.com/neelarghya)
 - [Pari Rajarathinam](https://github.com/rrpari)
 
 
